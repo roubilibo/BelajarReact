@@ -15,13 +15,20 @@
 		<div id="root"></div>
 		<script type="text/babel">
 
-			function MyApp() {
-				return <h1>Belajar React wut wut wut 🚀</h1>;
+			function Header({ name }) {
+				return (<h1>Belajar React {name ? name : 'seru seru'} 🚀</h1>);
 			}
-
+			function HomePage() {
+				return (
+					<div>
+						<Header />
+						<Header name="wut wut wut" />
+					</div>
+				)
+			}
 			const container = document.getElementById('root');
 			const root = ReactDOM.createRoot(container);
-			root.render(<MyApp />);
+			root.render(<HomePage />);
 
 		</script>
 		<!--
